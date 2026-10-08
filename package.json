@@ -1,0 +1,25 @@
+{
+  "name": "avaliacao-node-api",
+  "version": "1.0.0",
+  "description": "Avaliação Node API :|",
+  "homepage": "https://github.com/maycodeivid7/AvaliacaoNodeAPI#readme",
+  "bugs": {
+    "url": "https://github.com/maycodeivid7/AvaliacaoNodeAPI/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maycodeivid7/AvaliacaoNodeAPI.git"
+  },
+  "license": "ISC",
+  "author": "Mayco Deivid",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node --watch index.js",
+    "test": "jest"
+  },
+  "dependencies": {
+    "express": "5.2.1"
+  },
+  "devDependencies": {}
+}
