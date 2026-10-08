@@ -45,7 +45,10 @@ class Filme {
     Deletar(id) {
         filmes.splice(id, 1);
     }
-    
+ 
+    Status(id, lancado) {
+        filmes[id].lancado = lancado;
+    }
 }
 
 export default new Filme();

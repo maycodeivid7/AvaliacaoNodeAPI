@@ -61,7 +61,14 @@ class ControllerFilme {
     }
 
     Status(req, res) {
-
+        try {
+            const id = req.params.id;
+            const lancado = req.body.lancado;
+            ServiceFilme.Status(id, lancado);
+            res.status(201).send({ message: "Filme alterado com sucesso!" });
+        } catch (error) {
+            res.status(400).send({ error: error.message });
+        }
     }
 }
 

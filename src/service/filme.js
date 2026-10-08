@@ -40,6 +40,14 @@ class ServiceFilme {
         Filme.Deletar(id);
     }
 
+    Status(id, lancado) {
+        
+        if ( !id || isNaN(id) ) {
+            throw new Error("ID inválido!");
+        }
+   
+        Filme.Alterar(id, lancado);
+    }
 }
 
 export default new ServiceFilme();
