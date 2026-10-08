@@ -20,17 +20,17 @@ class ServiceFilme {
         Filme.Criar(titulo, classificacao, descricao, lancado);
     }
 
-    Alterar(id, filme) {
+    Alterar(id, titulo, classificacao, descricao, lancado) {
         
         if ( !id || isNaN(id) ) {
             throw new Error("ID inválido!");
         }
 
-        if ( !filme || typeof filme !== "string" ) {
+        if ( !titulo || typeof titulo !== "string" ) {
             throw Error("O nome do filme é inválido!");
         }
 
-        Filme.Alterar(id, filme);
+        Filme.Alterar(id, titulo, classificacao, descricao, lancado);
     }
 
     Deletar(id) {

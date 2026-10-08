@@ -39,8 +39,11 @@ class ControllerFilme {
     Alterar(req, res) {
         try {
             const id = req.params.id;
-            const filme = req.body.filme;
-            ServiceFilme.Alterar(id, filme);
+            const titulo = req.body.titulo;
+            const classificacao = req.body.classificacao;
+            const descricao = req.body.descricao;
+            const lancado = req.body.lancado;
+            ServiceFilme.Alterar(id, titulo, classificacao, descricao, lancado);
             res.status(201).send({ message: "Filme alterado com sucesso!" });
         } catch (error) {
             res.status(400).send({ error: error.message });
@@ -55,6 +58,10 @@ class ControllerFilme {
         } catch (error) {
             res.status(400).send({ error: error.message });
         }
+    }
+
+    Status(req, res) {
+
     }
 }
 

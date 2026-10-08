@@ -9,4 +9,6 @@ router.post("/criar", ControllerFilme.Criar);
 router.put("/alterar/:id", ControllerFilme.Alterar);
 router.delete("/deletar/:id", ControllerFilme.Deletar);
 
+router.put("/status/:id", ControllerFilme.Status);
+
 export default router;

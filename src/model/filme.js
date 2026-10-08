@@ -35,8 +35,11 @@ class Filme {
         filmes.push({ titulo, classificacao, descricao, lancado });
     }
 
-    Alterar(id, filme) {
-        filmes[id] = filme;
+    Alterar(id, titulo, classificacao, descricao, lancado) {
+        filmes[id].titulo = titulo;
+        filmes[id].classificacao = classificacao;
+        filmes[id].descricao = descricao;
+        filmes[id].lancado = lancado;
     }
 
     Deletar(id) {
