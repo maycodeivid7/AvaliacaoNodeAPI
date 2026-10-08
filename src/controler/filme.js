@@ -23,8 +23,13 @@ class ControllerFilme {
 
     Criar(req, res) {
         try {
-            const filme = req.body.filme;
-            ServiceFilme.Criar(filme);
+            const titulo = req.body.titulo;
+            const classificacao = req.body.classificacao;
+            const descricao = req.body.descricao;
+            const lancado = req.body.lancado;
+
+            ServiceFilme.Criar(titulo, classificacao, descricao, lancado);
+            
             res.status(201).send({ message: "Filme cadastrado com sucesso!" });
         } catch (error) {
             res.status(400).send({ error: error.message });

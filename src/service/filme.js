@@ -13,11 +13,11 @@ class ServiceFilme {
         return Filme.BuscarUm(id);
     }
 
-    Criar(filme) {
-        if ( !filme || typeof filme !== "string" ) {
-            throw new Error("Nome inválido!");
+    Criar(titulo, classificacao, descricao, lancado) {
+        if ( !titulo || typeof titulo !== "string" ) {
+            throw new Error("O título do filme é inválido!");
         }
-        Filme.Criar(filme);
+        Filme.Criar(titulo, classificacao, descricao, lancado);
     }
 
     Alterar(id, filme) {
